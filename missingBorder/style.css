@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.parent {
+  width: 200px;
+  height: 200px;
+  border: 1.5px solid orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.child {
+  width: 150px;
+  height: 150px;
+  border: 15px solid rgb(119, 79, 18);
+  position: relative;
+}
+.child::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  background-color: white;
+  top: -15px;
+  left: calc(60px - 15px);
+}
